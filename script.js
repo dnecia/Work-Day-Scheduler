@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    //show the current time including the moment.min.js
-    $("#currentDay").text(moment().format("MMM Do YYYY, h:mm:ss a"));
+  //show the current time including the moment.min.js
+    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); // use of moment.js
     //save button 
-    hourTracking();
+    hourTracking(); 
     //When user clicks button content saves
-    $(".saveBtn").on("click", function() {
+    $(".saveBtn").on("click", function () {
         console.log(this);
-        var text = $(this).siblings(".descritpion").val();
-        var time = $(this).parent().attr("id");
+        var text = $(this).siblings(".description").val();  
+        var time = $(this).parent().attr("id"); 
         
         localStorage.setItem(time, text); //local storage so on refresh it is stored here (check in application to make sure this works and does not give back undefined)
     })
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     function hourTracking() {
         var currentHour = moment().hour();
-        $(".time-block").each(function(){ //add in loop for the time-blocks
+        $(".time-block").each(function () { //add in loop for the time-blocks
             var blockHour = parseInt($(this).attr("id").split("hour")[1]);
             console.log( blockHour, currentHour)
             //timeblock condiitons bringing in the css elements use else/if statements 
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 $(this).removeClass("present");
             }
             else if(blockHour === currentHour) {
-                $(this).addClass("past");
+                $(this).removeClass("past");
                 $(this).addClass("present");
                 $(this).removeClass("future");
             }
