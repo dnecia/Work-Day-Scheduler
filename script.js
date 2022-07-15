@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //show the current time including the moment.min.js
-  $("#currentDay").text(moment().format("MMMM Do YYYY")); // use of moment.js
+  $("#currentDay").text(moment().format("dddd, MMMM Do YYYY")); // use of moment.js
   //save button
   hourTracking();
   //When user clicks button content saves
