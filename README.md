@@ -4,5 +4,5 @@
 
 ![alt text](./Screen%20Shot%202022-07-14%20at%204.31.08%20PM.png)
 
-![alt text](./Screen%20Shot%202022-07-14%20at%209.29.35%20PM.png)
+![alt text](./Screen%20Shot%202022-07-14%20at%209.53.15%20PM.png)
 [This is the link to my Portfolio] (https://dnecia.github.io/Work-Day-Scheduler/)
